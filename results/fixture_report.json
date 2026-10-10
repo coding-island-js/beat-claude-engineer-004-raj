@@ -1,0 +1,461 @@
+{
+ "fixture_sha256": "448b6db3c2708ff2a5244a596aa2c6ddb2bbf9644478c56a72e96c127e784bf2",
+ "rows": 25,
+ "steps": {
+  "1_ingest": {
+   "checks": {
+    "acked_removed_by_gdpr_compaction": 0,
+    "acked_not_in_log": 0,
+    "acked_total": 25,
+    "log_records": 25,
+    "records_with_outcome": 25,
+    "uncommitted_tail": 0,
+    "event_rows": 21,
+    "human_events": 14,
+    "rollup_total": 14,
+    "unexplained_difference": 0
+   },
+   "outcomes": {
+    "stored": 21,
+    "duplicate": 1,
+    "quarantined": 2,
+    "privacy_request_queued": 1
+   },
+   "per_tenant": {
+    "(no tenant)": {
+     "quarantined": 2
+    },
+    "t-017": {
+     "stored": 7,
+     "bot_rows": 0,
+     "served_human_rows": 7
+    },
+    "t-042": {
+     "duplicate": 1,
+     "stored": 11,
+     "bot_rows": 4,
+     "served_human_rows": 7
+    },
+    "t-088": {
+     "privacy_request_queued": 1,
+     "stored": 3,
+     "bot_rows": 0,
+     "served_human_rows": 3
+    }
+   },
+   "ok": true,
+   "failures": []
+  },
+  "2_replay_same_data": {
+   "checks": {
+    "acked_removed_by_gdpr_compaction": 0,
+    "acked_not_in_log": 0,
+    "acked_total": 50,
+    "log_records": 50,
+    "records_with_outcome": 50,
+    "uncommitted_tail": 0,
+    "event_rows": 21,
+    "human_events": 14,
+    "rollup_total": 14,
+    "unexplained_difference": 0
+   },
+   "outcomes": {
+    "stored": 21,
+    "duplicate": 24,
+    "quarantined": 4,
+    "privacy_request_queued": 1
+   },
+   "per_tenant": {
+    "(no tenant)": {
+     "quarantined": 4
+    },
+    "t-017": {
+     "duplicate": 7,
+     "stored": 7,
+     "bot_rows": 0,
+     "served_human_rows": 7
+    },
+    "t-042": {
+     "duplicate": 13,
+     "stored": 11,
+     "bot_rows": 4,
+     "served_human_rows": 7
+    },
+    "t-088": {
+     "duplicate": 4,
+     "privacy_request_queued": 1,
+     "stored": 3,
+     "bot_rows": 0,
+     "served_human_rows": 3
+    }
+   },
+   "ok": true,
+   "failures": [],
+   "t042_human_events_before_after": [
+    5,
+    5
+   ],
+   "idempotent": true
+  },
+  "3_gdpr_delete": {
+   "tenant_id": "t-088",
+   "subject_ids": [
+    "anon-77a",
+    "u-1077"
+   ],
+   "deleted_event_ids": [
+    "evt-0006"
+   ],
+   "deleted_rows_src": [
+    "pass1:line7"
+   ],
+   "raw_log_records_removed": 4,
+   "remaining_after_delete": {
+    "event_rows": 0,
+    "identity_rows": 0,
+    "privacy_rows_with_ids": 0,
+    "raw_log_records": 0
+   },
+   "ok": true,
+   "audit_subject_hash": "9631dc3df5a4fd66",
+   "reconcile": {
+    "checks": {
+     "acked_removed_by_gdpr_compaction": 4,
+     "acked_not_in_log": 0,
+     "acked_total": 50,
+     "log_records": 46,
+     "records_with_outcome": 50,
+     "uncommitted_tail": 0,
+     "event_rows": 20,
+     "human_events": 13,
+     "rollup_total": 13,
+     "unexplained_difference": 0
+    },
+    "outcomes": {
+     "stored": 20,
+     "duplicate": 24,
+     "quarantined": 4,
+     "deleted_gdpr": 1,
+     "privacy_request_queued": 1
+    },
+    "per_tenant": {
+     "(no tenant)": {
+      "quarantined": 4
+     },
+     "t-017": {
+      "duplicate": 7,
+      "stored": 7,
+      "bot_rows": 0,
+      "served_human_rows": 7
+     },
+     "t-042": {
+      "duplicate": 13,
+      "stored": 11,
+      "bot_rows": 4,
+      "served_human_rows": 7
+     },
+     "t-088": {
+      "deleted_gdpr": 1,
+      "duplicate": 4,
+      "privacy_request_queued": 1,
+      "stored": 2,
+      "bot_rows": 0,
+      "served_human_rows": 2
+     }
+    },
+    "ok": true,
+    "failures": []
+   }
+  },
+  "4_backfill_after_delete": {
+   "checks": {
+    "acked_removed_by_gdpr_compaction": 4,
+    "acked_not_in_log": 0,
+    "acked_total": 75,
+    "log_records": 71,
+    "records_with_outcome": 75,
+    "uncommitted_tail": 0,
+    "event_rows": 20,
+    "human_events": 13,
+    "rollup_total": 13,
+    "unexplained_difference": 0
+   },
+   "outcomes": {
+    "stored": 20,
+    "duplicate": 46,
+    "quarantined": 6,
+    "deleted_gdpr": 1,
+    "privacy_request_queued": 1,
+    "suppressed_erased": 1
+   },
+   "per_tenant": {
+    "(no tenant)": {
+     "quarantined": 6
+    },
+    "t-017": {
+     "duplicate": 14,
+     "stored": 7,
+     "bot_rows": 0,
+     "served_human_rows": 7
+    },
+    "t-042": {
+     "duplicate": 25,
+     "stored": 11,
+     "bot_rows": 4,
+     "served_human_rows": 7
+    },
+    "t-088": {
+     "deleted_gdpr": 1,
+     "duplicate": 7,
+     "privacy_request_queued": 1,
+     "stored": 2,
+     "suppressed_erased": 1,
+     "bot_rows": 0,
+     "served_human_rows": 2
+    }
+   },
+   "ok": true,
+   "failures": [],
+   "erased_subject_rows_after_backfill": 0,
+   "suppressed_on_backfill": [
+    {
+     "event_id": "evt-0006",
+     "src": "pass3:line7"
+    }
+   ]
+  }
+ },
+ "anomalies": {
+  "duplicate_retry": {
+   "rows": [
+    {
+     "event_id": "evt-0002",
+     "line": "line5",
+     "first_seen": "pass1:line2"
+    }
+   ],
+   "action": "Dropped as a retry: same (tenant_id, event_id) and same content hash (received_at differs). Counted once."
+  },
+  "malformed_json": {
+   "rows": [
+    {
+     "event_id_guess": "evt-0020",
+     "line": "line21"
+    }
+   ],
+   "action": "Raw bytes kept in the quarantine partition (counted, never dropped), 400 to the client. Not auto-repaired: a truncated body may be missing fields."
+  },
+  "missing_tenant": {
+   "rows": [
+    {
+     "event_id": "evt-0011",
+     "line": "line12"
+    }
+   ],
+   "action": "Quarantined. Never guessed from the URL; one wrong guess is a cross-tenant leak. In production the tenant comes from the write key, not the payload."
+  },
+  "legacy_sdk_schema": {
+   "rows": [
+    {
+     "event_id": "evt-0009",
+     "line": "line10",
+     "flags": "missing_received_at;legacy_schema",
+     "event_time_used": "2026-06-15T14:08:02.000Z"
+    }
+   ],
+   "action": "Mapped pageview->page_view, timestamp->ts, page_path->path, ref->referrer. Accepted, because customers cannot be forced to update the SDK. No received_at: flagged, client time used."
+  },
+  "client_clock_ahead": {
+   "rows": [
+    {
+     "event_id": "evt-0005",
+     "line": "line6",
+     "flags": "client_clock_ahead:47.2s",
+     "event_time_used": "2026-06-15T14:04:12.930Z"
+    },
+    {
+     "event_id": "evt-0006",
+     "line": "line7",
+     "flags": "client_clock_ahead:3900.0s",
+     "event_time_used": "2026-06-15T14:06:03.552Z"
+    }
+   ],
+   "action": "Client ts is later than server receive time by more than 5s. Server received_at used as event time; original ts kept."
+  },
+  "ts_implausible_future": {
+   "rows": [
+    {
+     "event_id": "evt-0016",
+     "line": "line17",
+     "flags": "ts_implausible_future:31535999s",
+     "event_time_used": "2026-06-15T14:11:27.522Z"
+    }
+   ],
+   "action": "Client ts more than 24h ahead (here a year). Server received_at used; never allowed to create a future dashboard bucket."
+  },
+  "pii_in_properties": {
+   "rows": [
+    {
+     "event_id": "evt-0007",
+     "line": "line8",
+     "flags": "pii_scrubbed:contact_email,phone",
+     "event_time_used": "2026-06-15T14:06:41.220Z"
+    }
+   ],
+   "action": "Email and phone replaced with a keyed hash at intake, before the durable write. Raw PII never reaches the log, the store or exports."
+  },
+  "bot_burst": {
+   "visitors": [
+    {
+     "anonymous_id": "anon-8fc",
+     "reason": "4 page views in 1.0s",
+     "first_event_id": "evt-0012"
+    }
+   ],
+   "rows": [
+    {
+     "event_id": "evt-0012",
+     "line": "line13"
+    },
+    {
+     "event_id": "evt-0013",
+     "line": "line14"
+    },
+    {
+     "event_id": "evt-0014",
+     "line": "line15"
+    },
+    {
+     "event_id": "evt-0015",
+     "line": "line16"
+    }
+   ],
+   "action": "4 page views in under 1s from one visitor. Kept in raw, excluded from dashboards and segments, earlier counts corrected. The scanner referrer is only a hint, never the rule."
+  },
+  "privacy_request_via_sdk": {
+   "rows": [
+    {
+     "event_id": "evt-0017",
+     "line": "line18",
+     "status_after_ingest": "pending_verification"
+    }
+   ],
+   "action": "Not executed from the stream: the SDK write key is public, so anyone could send it. Queued for the tenant to verify; executed later through the authenticated path (step 3)."
+  },
+  "client_computed_count": {
+   "rows": [
+    {
+     "event_id": "evt-0019",
+     "line": "line20",
+     "flags": "client_count_untrusted:count_today",
+     "event_time_used": "2026-06-15T14:14:52.808Z",
+     "client_claimed": 3,
+     "server_counted_pricing_views": 1,
+     "server_pricing_event_ids": [
+      "evt-0001"
+     ]
+    }
+   ],
+   "action": "Client-computed count is not trusted. The SDK says 3 today; this 17-minute sample holds 1 server-seen pricing view. The sample cannot say which is right, so segments are built only from server-counted events."
+  },
+  "identity_stitching": {
+   "links": [
+    {
+     "anonymous_id": "anon-9f2",
+     "user_id": "u-5511",
+     "source": "identify",
+     "event_id": "evt-0003"
+    },
+    {
+     "anonymous_id": "anon-c81",
+     "user_id": "u-2209",
+     "source": "identify",
+     "event_id": "evt-0008"
+    },
+    {
+     "anonymous_id": "anon-52d",
+     "user_id": "u-8842",
+     "source": "custom",
+     "event_id": "evt-0016"
+    },
+    {
+     "anonymous_id": "anon-3d0",
+     "user_id": "u-7304",
+     "source": "identify",
+     "event_id": "evt-0022"
+    }
+   ],
+   "action": "anon->user links per tenant, from any event that carries both ids, except unverified privacy requests. Stitched at read time through the link table, not by rewriting history, so a deletion removes one link instead of rewriting every event."
+  }
+ },
+ "live_t042": {
+  "tenant_id": "t-042",
+  "minutes": [
+   {
+    "minute": "2026-06-15T14:02",
+    "type": "click",
+    "n": 1
+   },
+   {
+    "minute": "2026-06-15T14:02",
+    "type": "page_view",
+    "n": 1
+   },
+   {
+    "minute": "2026-06-15T14:06",
+    "type": "custom",
+    "n": 1
+   },
+   {
+    "minute": "2026-06-15T14:08",
+    "type": "page_view",
+    "n": 1
+   },
+   {
+    "minute": "2026-06-15T14:14",
+    "type": "custom",
+    "n": 1
+   }
+  ],
+  "total_human_events": 5,
+  "excluded_bot_events": 4
+ },
+ "visitor_u7304": {
+  "tenant_id": "t-042",
+  "ids": [
+   "anon-3d0",
+   "u-7304"
+  ],
+  "events": [
+   {
+    "event_id": "evt-0007",
+    "type": "custom",
+    "path": null,
+    "event_time": "2026-06-15T14:06:41.220Z",
+    "is_bot": 0
+   },
+   {
+    "event_id": "evt-0022",
+    "type": "identify",
+    "path": null,
+    "event_time": "2026-06-15T14:17:29.930Z",
+    "is_bot": 0
+   }
+  ],
+  "server_pricing_views": 0,
+  "pricing_view_event_ids": [],
+  "segments": {
+   "viewed_pricing_3x": false
+  }
+ },
+ "segment_viewed_pricing_t042": {
+  "tenant_id": "t-042",
+  "min": 3,
+  "members": {},
+  "below_threshold": {
+   "anon-9f2": 1,
+   "anon-1be": 1
+  }
+ },
+ "all_checks_passed": true
+}

@@ -1,0 +1,231 @@
+{
+ "region": "us-east-1",
+ "source": "AWS Price List Bulk API (public, no login)",
+ "prices": {
+  "kinesis_shard_hour": {
+   "usd": 0.015,
+   "unit": "ShardHour",
+   "description": "$0.015 per provisioned shard-hour",
+   "sku": "7RXVY4V5SG8NQC38",
+   "service": "AmazonKinesis",
+   "publication_date": "2026-09-11T12:44:43Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesis/current/us-east-1/index.json"
+  },
+  "kinesis_extended_retention_shard_hour": {
+   "usd": 0.02,
+   "unit": "ShardHour",
+   "description": "$0.020 per extended shard-hour",
+   "sku": "9DT967X6YQX3AYMB",
+   "service": "AmazonKinesis",
+   "publication_date": "2026-09-11T12:44:43Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesis/current/us-east-1/index.json"
+  },
+  "kinesis_put_payload_unit": {
+   "usd": 1.4e-08,
+   "unit": "PutRequest",
+   "description": "$0.014 per 1 million payload units",
+   "sku": "MAFXKQJ2YAQM6UDY",
+   "service": "AmazonKinesis",
+   "publication_date": "2026-09-11T12:44:43Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesis/current/us-east-1/index.json"
+  },
+  "kinesis_ondemand_stream_hour": {
+   "usd": 0.04,
+   "unit": "StreamHr",
+   "description": "0.04 per Stream Hour Used",
+   "sku": "S69RFKAH58MYJ6TF",
+   "service": "AmazonKinesis",
+   "publication_date": "2026-09-11T12:44:43Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesis/current/us-east-1/index.json"
+  },
+  "kinesis_ondemand_gb_in": {
+   "usd": 0.08,
+   "unit": "GB",
+   "description": "0.08 per GB of data written",
+   "sku": "826E7FJQWVKN3CBH",
+   "service": "AmazonKinesis",
+   "publication_date": "2026-09-11T12:44:43Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesis/current/us-east-1/index.json"
+  },
+  "kinesis_ondemand_gb_out": {
+   "usd": 0.04,
+   "unit": "GB",
+   "description": "0.04 per GB of data read using GetRecords Consumer",
+   "sku": "PNHYMNK9TM59MTU8",
+   "service": "AmazonKinesis",
+   "publication_date": "2026-09-11T12:44:43Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesis/current/us-east-1/index.json"
+  },
+  "lambda_request": {
+   "usd": 2e-07,
+   "unit": "Requests",
+   "description": "AWS Lambda - Total Requests for ARM - US East (Northern Virginia)",
+   "sku": "K7BX6567RJ67A2KE",
+   "service": "AWSLambda",
+   "publication_date": "2026-10-09T22:31:22Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSLambda/current/us-east-1/index.json"
+  },
+  "lambda_gb_second_arm": {
+   "usd": 1.33334e-05,
+   "unit": "Lambda-GB-Second",
+   "description": "AWS Lambda - Total Compute for ARM - US East (Northern Virginia)-Tier-1",
+   "sku": "72SBSFWPMDTH8S3J",
+   "service": "AWSLambda",
+   "publication_date": "2026-10-09T22:31:22Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSLambda/current/us-east-1/index.json"
+  },
+  "firehose_kds_source_gb": {
+   "usd": 0.029,
+   "unit": "GB",
+   "description": "Tier 1 $0.029 per GB of data read from Kinesis Data Streams",
+   "sku": "9HMQK22ZQCCJWFF6",
+   "service": "AmazonKinesisFirehose",
+   "publication_date": "2026-09-11T12:44:46Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesisFirehose/current/us-east-1/index.json"
+  },
+  "firehose_kds_no_rounding_gb": {
+   "usd": 0.074,
+   "unit": "GB",
+   "description": "Per GB of data ingested or delivered",
+   "sku": "7FBBNJEEPEC6TFHX",
+   "service": "AmazonKinesisFirehose",
+   "publication_date": "2026-09-11T12:44:46Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonKinesisFirehose/current/us-east-1/index.json"
+  },
+  "fargate_arm_vcpu_hour": {
+   "usd": 0.03238,
+   "unit": "hours",
+   "description": "AWS Fargate - ARM - vCPU - US East (N. Virginia)",
+   "sku": "XSZATS4VYMDC9CYN",
+   "service": "AmazonECS",
+   "publication_date": "2026-09-11T12:44:25Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/us-east-1/index.json"
+  },
+  "fargate_arm_gb_hour": {
+   "usd": 0.00356,
+   "unit": "hours",
+   "description": "AWS Fargate - ARM - Memory - US East (N. Virginia)",
+   "sku": "UNH9KPQP7W7C66C9",
+   "service": "AmazonECS",
+   "publication_date": "2026-09-11T12:44:25Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/us-east-1/index.json"
+  },
+  "s3_standard_gb_month": {
+   "usd": 0.023,
+   "unit": "GB-Mo",
+   "description": "$0.023 per GB - first 50 TB / month of storage used",
+   "sku": "WP9ANXZGBYYSGJEA",
+   "service": "AmazonS3",
+   "publication_date": "2026-09-28T23:04:16Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json"
+  },
+  "s3_put_request": {
+   "usd": 5e-06,
+   "unit": "Requests",
+   "description": "$0.005 per 1,000 PUT, COPY, POST, or LIST requests",
+   "sku": "E9YHNFENF4XQBZR6",
+   "service": "AmazonS3",
+   "publication_date": "2026-09-28T23:04:16Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json"
+  },
+  "elasticache_r7g_large_hour": {
+   "usd": 0.219,
+   "unit": "Hrs",
+   "description": "$0.219 per Memory optimized r7g.large node hour running Redis",
+   "sku": "MWNGNHD8QDQRAGKN",
+   "service": "AmazonElastiCache",
+   "publication_date": "2026-09-14T06:37:14Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonElastiCache/current/us-east-1/index.json"
+  },
+  "data_transfer_out_internet_gb": {
+   "usd": 0.09,
+   "unit": "GB",
+   "description": "$0.090 per GB - first 10 TB / month data transfer out beyond the global free tier",
+   "sku": "HQEH3ZWJVT46JHRG",
+   "service": "AWSDataTransfer",
+   "publication_date": "2026-09-16T13:22:08Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json"
+  },
+  "data_transfer_inter_az_gb": {
+   "usd": 0.01,
+   "unit": "GB",
+   "description": "$0.010 per GB - regional data transfer - in/out/between EC2 AZs or using elastic IPs or ELB",
+   "sku": "PNUBVW4CPC8XA46W",
+   "service": "AWSDataTransfer",
+   "publication_date": "2026-09-16T13:22:08Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/us-east-1/index.json"
+  },
+  "cloudwatch_logs_ingest_gb": {
+   "usd": 0.5,
+   "unit": "GB",
+   "description": "$0.50 per GB custom log data ingested in Standard log class - US East (Northern Virginia)",
+   "sku": "S8QGXX5R2BKKMDSJ",
+   "service": "AmazonCloudWatch",
+   "publication_date": "2026-10-07T11:55:40Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/us-east-1/index.json"
+  },
+  "alb_hour": {
+   "usd": 0.0225,
+   "unit": "Hrs",
+   "description": "$0.0225 per Application LoadBalancer-hour (or partial hour)",
+   "sku": "37CUWUT8GSNQEPUV",
+   "service": "AWSELB",
+   "publication_date": "2026-09-11T12:45:44Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/us-east-1/index.json"
+  },
+  "alb_lcu_hour": {
+   "usd": 0.008,
+   "unit": "LCU-Hrs",
+   "description": "$0.008 per used Application load balancer capacity unit-hour (or partial hour)",
+   "sku": "P2XGEJ8N3KU52WA8",
+   "service": "AWSELB",
+   "publication_date": "2026-09-11T12:45:44Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/us-east-1/index.json"
+  },
+  "vpc_endpoint_hour": {
+   "usd": 0.01,
+   "unit": "Hrs",
+   "description": "$0.01 per VPC Endpoint Hour",
+   "sku": "EN2N5TATXE673A3B",
+   "service": "AmazonVPC",
+   "publication_date": "2026-09-17T19:05:28Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonVPC/current/us-east-1/index.json"
+  },
+  "vpc_endpoint_gb": {
+   "usd": 0.01,
+   "unit": "GB",
+   "description": "$0.01 per GB for upto 1 PB monthly data processed by VPC Endpoints",
+   "sku": "DQYYEZBCWSW5XS2R",
+   "service": "AmazonVPC",
+   "publication_date": "2026-09-17T19:05:28Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonVPC/current/us-east-1/index.json"
+  },
+  "ec2_r7g_2xlarge_hour": {
+   "usd": 0.4284,
+   "unit": "Hrs",
+   "description": "$0.4284 per On Demand Linux r7g.2xlarge Instance Hour",
+   "sku": "4W55HJV9VC4VWG8P",
+   "service": "AmazonEC2",
+   "publication_date": "2026-10-09T20:31:34Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv"
+  },
+  "ec2_t4g_small_hour": {
+   "usd": 0.0168,
+   "unit": "Hrs",
+   "description": "$0.0168 per On Demand Linux t4g.small Instance Hour",
+   "sku": "9GWX7R3VJUG9P8Y8",
+   "service": "AmazonEC2",
+   "publication_date": "2026-10-09T20:31:34Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv"
+  },
+  "ebs_gp3_gb_month": {
+   "usd": 0.08,
+   "unit": "GB-Mo",
+   "description": "$0.08 per GB-month of General Purpose (gp3) provisioned storage - US East (N. Virginia)",
+   "sku": "JG3KUJMBRGHV3N8G",
+   "service": "AmazonEC2",
+   "publication_date": "2026-10-09T20:31:34Z",
+   "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv"
+  }
+ }
+}
