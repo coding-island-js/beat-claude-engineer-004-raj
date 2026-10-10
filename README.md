@@ -1,7 +1,9 @@
 # Real-time analytics pipeline prototype (Beat Claude engineer-004)
 
 A working, runnable model of the pipeline in [SUBMISSION.md](SUBMISSION.md) ([PDF](SUBMISSION.pdf)).
-Brief version 2026-07. Built against fixture sha256 `448b6db3c2708ff2a5244a596aa2c6ddb2bbf9644478c56a72e96c127e784bf2`.
+Brief version 2026-07. Built against fixture sha256 `1aeb24b415009e89fcf8acb5a178410faf216dc17b16920d9849ecc8bbb24235`.
+
+That is the hash of the bytes in the challenge repo. A Windows checkout with `core.autocrlf=true` rewrites line endings and gives a different hash, so `.gitattributes` here keeps the fixture byte-exact.
 
 Python 3.9 or newer. Standard library only. No install, no login, no keys, no network.
 

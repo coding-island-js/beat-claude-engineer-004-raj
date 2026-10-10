@@ -1,6 +1,6 @@
 # Engineer 004: Real-Time Analytics Pipeline
 
-**Raj Lakhani** · Brief version: 2026-07 · [Observed] Fixture `fixtures/event_sample.jsonl`, `shasum -a 256` = `448b6db3c2708ff2a5244a596aa2c6ddb2bbf9644478c56a72e96c127e784bf2`
+**Raj Lakhani** · Brief version: 2026-07 · [Observed] Fixture `fixtures/event_sample.jsonl`, `shasum -a 256` = `1aeb24b415009e89fcf8acb5a178410faf216dc17b16920d9849ecc8bbb24235`
 
 **Artifact:** https://github.com/coding-island-js/beat-claude-engineer-004-raj (public, no login). Run `python run_fixture.py`. Python 3.9+, standard library only, nothing to install.
 

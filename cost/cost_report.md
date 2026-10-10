@@ -8,7 +8,7 @@ Prices: AWS Price List API, us-east-1, snapshot in `cost/aws_prices.json` (SKU +
 |---|---|---|---|
 | events_per_day | 50,000,000 | Brief | brief: ~50M events/day |
 | spike_multiplier | 10 | Brief | brief: 10x traffic spikes |
-| fixture_mean_bytes | 230 | Observed | mean line size of fixtures/event_sample.jsonl (25 rows) |
+| fixture_mean_bytes | 229 | Observed | mean line size of fixtures/event_sample.jsonl (25 rows) |
 | event_bytes | 1,024 | Assumed | real events carry user agent, full URLs, custom props; 4x the fixture |
 | compression | 5 | Assumed | gzip on S3 and ClickHouse column compression on JSON-like events |
 | retention_months | 13 | Assumed | 13 months raw + hot, so year-over-year dashboards work |

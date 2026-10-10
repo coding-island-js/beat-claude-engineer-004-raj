@@ -18,7 +18,7 @@ HOURS = 730  # AWS pricing month
 I = {
     "events_per_day": ("Brief", 50_000_000, "brief: ~50M events/day"),
     "spike_multiplier": ("Brief", 10, "brief: 10x traffic spikes"),
-    "fixture_mean_bytes": ("Observed", 230, "mean line size of fixtures/event_sample.jsonl (25 rows)"),
+    "fixture_mean_bytes": ("Observed", 229, "mean line size of fixtures/event_sample.jsonl (25 rows)"),
     "event_bytes": ("Assumed", 1024, "real events carry user agent, full URLs, custom props; 4x the fixture"),
     "compression": ("Assumed", 5, "gzip on S3 and ClickHouse column compression on JSON-like events"),
     "retention_months": ("Assumed", 13, "13 months raw + hot, so year-over-year dashboards work"),
