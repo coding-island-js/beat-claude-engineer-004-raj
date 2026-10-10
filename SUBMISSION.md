@@ -134,7 +134,7 @@ Every number carries a label inline. Brief inputs are given. AWS prices are [Ben
 
 ## AI usage disclosure
 
-Built with Claude Code (Anthropic) as a coding agent. AI wrote most of the code and the first draft, ran the tests and load tests, and pulled AWS prices. No paid AI API was used. I set the constraints: standard library only, real runs only, every number labeled, nothing claimed that the repo cannot show. I checked the fixture findings against the raw rows myself and reviewed the final packet. Checks in code: `tests/test_pipeline.py` fails if any planted class is missed. [Observed] A bug caught that way: an early version flagged the custom event field `name` as personal data on evt-0016 and evt-0019. Known weak spots: the prototype is one machine and SQLite, and the AWS latency is an estimate.
+Built with Claude Code (Anthropic) as a coding agent. AI wrote most of the code and the first draft, ran the tests and load tests, and pulled AWS prices. No paid AI API was used. I set the constraints: standard library only, real runs only, every number labeled, nothing claimed that the repo cannot show. I directed the build and the review. The test suite and an independent AI reviewer checked the fixture findings against the raw rows. Checks in code: `tests/test_pipeline.py` fails if any planted class is missed. [Observed] A bug caught that way: an early version flagged the custom event field `name` as personal data on evt-0016 and evt-0019. Known weak spots: the prototype is one machine and SQLite, and the AWS latency is an estimate.
 
 ## What breaks it (failure handling)
 
